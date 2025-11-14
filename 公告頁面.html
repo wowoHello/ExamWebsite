@@ -1,69 +1,137 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>公告列表 - 原住民族語言到校考報名系統</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
         }
-        .fade-in {
-            animation: fadeIn 0.6s ease-out;
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
+      }
+      .fade-in {
+        animation: fadeIn 0.6s ease-out;
+      }
     </style>
-</head>
-<body class="bg-gray-50">
+  </head>
+  <body class="bg-gray-50">
     <!-- 導航列 -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                        </svg>
-                    </div>
-                    <div>
-                        <h1 class="text-lg font-bold text-gray-800">原住民族語言到校考</h1>
-                        <p class="text-xs text-gray-500">報名系統</p>
-                    </div>
-                </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex items-center space-x-3">
+            <div
+              class="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center"
+            >
+              <svg
+                class="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <h1 class="text-lg font-bold text-gray-800">
+                原住民族語言到校考
+              </h1>
+              <p class="text-xs text-gray-500">報名系統</p>
+            </div>
+          </div>
 
-                <!-- 桌面選單 -->
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="index.html" class="text-gray-700 hover:text-blue-600 transition font-medium">首頁</a>
-                    <a href="公告頁面.html" class="text-blue-600 font-medium border-b-2 border-blue-600 pb-1">公告</a>
-                    <a href="報名步驟.html" class="text-gray-700 hover:text-blue-600 transition font-medium">報名流程</a>
-                    <a href="考生查詢與資料.html" class="text-gray-700 hover:text-blue-600 transition font-medium">考生查詢</a>
-                    <a href="聯絡我們.html" class="text-gray-700 hover:text-blue-600 transition font-medium">聯絡我們</a>
-                    <a
+          <!-- 桌面選單 -->
+          <div class="hidden md:flex items-center space-x-6">
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-blue-600 transition font-medium"
+              >首頁</a
+            >
+            <a
+              href="公告頁面.html"
+              class="text-blue-600 font-medium border-b-2 border-blue-600 pb-1"
+              >公告</a
+            >
+            <a
+              href="報名步驟.html"
+              class="text-gray-700 hover:text-blue-600 transition font-medium"
+              >報名流程</a
+            >
+            <a
+              href="考生查詢與資料.html"
+              class="text-gray-700 hover:text-blue-600 transition font-medium"
+              >考生查詢</a
+            >
+            <a
+              href="聯絡我們.html"
+              class="text-gray-700 hover:text-blue-600 transition font-medium"
+              >聯絡我們</a
+            >
+            <a
               href="登入頁面.html"
               class="inline-flex items-center justify-center px-5 py-2.5 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-semibold rounded-lg shadow-sm transition-all duration-200"
             >
               登入
             </a>
-                </div>
+          </div>
 
-                <!-- 手機選單按鈕 -->
-                <button id="mobileMenuBtn" class="md:hidden">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
+          <!-- 手機選單按鈕 -->
+          <button id="mobileMenuBtn" class="md:hidden">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
 
-            <!-- 手機選單 -->
-            <div id="mobileMenu" class="hidden md:hidden py-4 border-t">
-                <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-600">首頁</a>
-                <a href="公告頁面.html" class="block py-2 text-blue-600 font-bold">公告</a>
-                <a href="報名步驟.html" class="block py-2 text-gray-700 hover:text-blue-600">報名流程</a>
-                <a href="考生查詢與資料.html" class="block py-2 text-gray-700 hover:text-blue-600">考生查詢</a>
-                <a href="聯絡我們.html" class="block py-2 text-gray-700 hover:text-blue-600">聯絡我們</a>
-                <div class="text-center mt-4">
+        <!-- 手機選單 -->
+        <div id="mobileMenu" class="hidden md:hidden py-4 border-t">
+          <a
+            href="index.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
+            >首頁</a
+          >
+          <a href="公告頁面.html" class="block py-2 text-blue-600 font-bold"
+            >公告</a
+          >
+          <a
+            href="報名步驟.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
+            >報名流程</a
+          >
+          <a
+            href="考生查詢與資料.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
+            >考生查詢</a
+          >
+          <a
+            href="聯絡我們.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
+            >聯絡我們</a
+          >
+          <div class="text-center mt-4">
             <a
               href="登入頁面.html"
               class="inline-block text-blue-600 font-medium hover:underline hover:text-blue-700"
@@ -71,236 +139,400 @@
               已有帳號？登入
             </a>
           </div>
-            </div>
         </div>
+      </div>
     </nav>
 
     <!-- 頁面標題 -->
     <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="text-3xl md:text-4xl font-bold">最新公告</h1>
-            <p class="text-blue-100 mt-2">共 24 則公告</p>
-        </div>
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl md:text-4xl font-bold">最新公告</h1>
+        <p class="text-blue-100 mt-2">共 24 則公告</p>
+      </div>
     </div>
 
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <!-- 搜尋框 -->
-        <div class="bg-white rounded-lg shadow-md p-4 mb-6">
-            <div class="relative">
-                <input 
-                    type="text" 
-                    placeholder="搜尋公告..." 
-                    class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      <!-- 搜尋框 -->
+      <div class="bg-white rounded-lg shadow-md p-4 mb-6">
+        <div class="relative">
+          <input
+            type="text"
+            placeholder="搜尋公告..."
+            class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          />
+          <svg
+            class="w-5 h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- 公告列表 -->
+      <div class="space-y-4 fade-in">
+        <!-- 公告1 -->
+        <a href="公告詳細.html" class="block">
+          <article
+            class="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer overflow-hidden"
+          >
+            <div class="p-6">
+              <div class="flex items-center space-x-3 mb-3">
+                <span
+                  class="bg-red-500 text-white text-xs px-3 py-1 rounded-full font-bold"
+                  >重要</span
                 >
-                <svg class="w-5 h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                </svg>
+                <span class="text-gray-500 text-sm">2024-11-13</span>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-800 mb-2 hover:text-blue-600 transition"
+              >
+                113年度第二梯次報名即日起開放
+              </h3>
+              <p class="text-gray-600 mb-3">
+                請各校教師儘速完成帳號註冊，並聯絡我們索取報名表格。報名截止日期為
+                12 月 15 日，請把握時間完成報名作業...
+              </p>
+              <div class="flex items-center justify-between text-sm">
+                <button
+                  class="text-blue-600 hover:text-blue-700 font-medium flex items-center"
+                >
+                  閱讀全文
+                  <svg
+                    class="w-4 h-4 ml-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
             </div>
-        </div>
+          </article>
+        </a>
+        <!-- 公告2 -->
+        <article
+          class="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer overflow-hidden"
+        >
+          <div class="p-6">
+            <div class="flex items-center space-x-3 mb-3">
+              <span
+                class="bg-yellow-500 text-white text-xs px-3 py-1 rounded-full font-bold"
+                >置頂</span
+              >
+              <span class="text-gray-500 text-sm">2024-11-10</span>
+            </div>
+            <h3
+              class="text-xl font-bold text-gray-800 mb-2 hover:text-blue-600 transition"
+            >
+              報名表填寫注意事項與常見問題
+            </h3>
+            <p class="text-gray-600 mb-3">
+              提醒各校注意報名表各欄位填寫規範，避免資料錯誤影響考生權益。本文詳列各項注意事項及常見錯誤...
+            </p>
+            <div class="flex items-center justify-between text-sm">
+              <button
+                class="text-blue-600 hover:text-blue-700 font-medium flex items-center"
+              >
+                閱讀全文
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
 
-        <!-- 公告列表 -->
-        <div class="space-y-4 fade-in">
-            <!-- 公告1 -->
-            <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer overflow-hidden">
-                <div class="p-6">
-                    <div class="flex items-center space-x-3 mb-3">
-                        <span class="bg-red-500 text-white text-xs px-3 py-1 rounded-full font-bold">重要</span>
-                        <span class="text-gray-500 text-sm">2024-11-13</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2 hover:text-blue-600 transition">
-                        113年度第二梯次報名即日起開放
-                    </h3>
-                    <p class="text-gray-600 mb-3">
-                        請各校教師儘速完成帳號註冊，並聯絡我們索取報名表格。報名截止日期為 12 月 15 日，請把握時間完成報名作業...
-                    </p>
-                    <div class="flex items-center justify-between text-sm">
-                        <button class="text-blue-600 hover:text-blue-700 font-medium flex items-center">
-                            閱讀全文
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </article>
+        <!-- 公告3 -->
+        <article
+          class="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer overflow-hidden"
+        >
+          <div class="p-6">
+            <div class="flex items-center space-x-3 mb-3">
+              <span
+                class="bg-gray-500 text-white text-xs px-3 py-1 rounded-full font-bold"
+                >一般</span
+              >
+              <span class="text-gray-500 text-sm">2024-11-08</span>
+            </div>
+            <h3
+              class="text-xl font-bold text-gray-800 mb-2 hover:text-blue-600 transition"
+            >
+              考場測機時間安排公告
+            </h3>
+            <p class="text-gray-600 mb-3">
+              中南區各校測機時間已排定，請查看詳細時程表。各校請依照排定時間配合測機作業，若有特殊狀況請提前聯繫...
+            </p>
+            <div class="flex items-center justify-between text-sm">
+              <button
+                class="text-blue-600 hover:text-blue-700 font-medium flex items-center"
+              >
+                閱讀全文
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
 
-            <!-- 公告2 -->
-            <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer overflow-hidden">
-                <div class="p-6">
-                    <div class="flex items-center space-x-3 mb-3">
-                        <span class="bg-yellow-500 text-white text-xs px-3 py-1 rounded-full font-bold">置頂</span>
-                        <span class="text-gray-500 text-sm">2024-11-10</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2 hover:text-blue-600 transition">
-                        報名表填寫注意事項與常見問題
-                    </h3>
-                    <p class="text-gray-600 mb-3">
-                        提醒各校注意報名表各欄位填寫規範，避免資料錯誤影響考生權益。本文詳列各項注意事項及常見錯誤...
-                    </p>
-                    <div class="flex items-center justify-between text-sm">
-                        <button class="text-blue-600 hover:text-blue-700 font-medium flex items-center">
-                            閱讀全文
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </article>
+        <!-- 公告4 -->
+        <article
+          class="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer overflow-hidden"
+        >
+          <div class="p-6">
+            <div class="flex items-center space-x-3 mb-3">
+              <span
+                class="bg-gray-500 text-white text-xs px-3 py-1 rounded-full font-bold"
+                >一般</span
+              >
+              <span class="text-gray-500 text-sm">2024-11-05</span>
+            </div>
+            <h3
+              class="text-xl font-bold text-gray-800 mb-2 hover:text-blue-600 transition"
+            >
+              監試人員訓練課程開放報名
+            </h3>
+            <p class="text-gray-600 mb-3">
+              113年度監試人員訓練課程即日起開放報名，包含一般監試人員及技術監試人員兩種類別，請各校依需求報名...
+            </p>
+            <div class="flex items-center justify-between text-sm">
+              <button
+                class="text-blue-600 hover:text-blue-700 font-medium flex items-center"
+              >
+                閱讀全文
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
 
-            <!-- 公告3 -->
-            <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer overflow-hidden">
-                <div class="p-6">
-                    <div class="flex items-center space-x-3 mb-3">
-                        <span class="bg-gray-500 text-white text-xs px-3 py-1 rounded-full font-bold">一般</span>
-                        <span class="text-gray-500 text-sm">2024-11-08</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2 hover:text-blue-600 transition">
-                        考場測機時間安排公告
-                    </h3>
-                    <p class="text-gray-600 mb-3">
-                        中南區各校測機時間已排定，請查看詳細時程表。各校請依照排定時間配合測機作業，若有特殊狀況請提前聯繫...
-                    </p>
-                    <div class="flex items-center justify-between text-sm">
-                        <button class="text-blue-600 hover:text-blue-700 font-medium flex items-center">
-                            閱讀全文
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </article>
+        <!-- 公告5 -->
+        <article
+          class="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer overflow-hidden"
+        >
+          <div class="p-6">
+            <div class="flex items-center space-x-3 mb-3">
+              <span
+                class="bg-gray-500 text-white text-xs px-3 py-1 rounded-full font-bold"
+                >一般</span
+              >
+              <span class="text-gray-500 text-sm">2024-11-02</span>
+            </div>
+            <h3
+              class="text-xl font-bold text-gray-800 mb-2 hover:text-blue-600 transition"
+            >
+              成績複查申請作業說明
+            </h3>
+            <p class="text-gray-600 mb-3">
+              考生如對成績有疑義，可於成績公告後 7
+              日內提出複查申請。本文說明複查申請流程及注意事項...
+            </p>
+            <div class="flex items-center justify-between text-sm">
+              <button
+                class="text-blue-600 hover:text-blue-700 font-medium flex items-center"
+              >
+                閱讀全文
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
 
-            <!-- 公告4 -->
-            <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer overflow-hidden">
-                <div class="p-6">
-                    <div class="flex items-center space-x-3 mb-3">
-                        <span class="bg-gray-500 text-white text-xs px-3 py-1 rounded-full font-bold">一般</span>
-                        <span class="text-gray-500 text-sm">2024-11-05</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2 hover:text-blue-600 transition">
-                        監試人員訓練課程開放報名
-                    </h3>
-                    <p class="text-gray-600 mb-3">
-                        113年度監試人員訓練課程即日起開放報名，包含一般監試人員及技術監試人員兩種類別，請各校依需求報名...
-                    </p>
-                    <div class="flex items-center justify-between text-sm">
-                        <button class="text-blue-600 hover:text-blue-700 font-medium flex items-center">
-                            閱讀全文
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </article>
+        <!-- 公告6 -->
+        <article
+          class="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer overflow-hidden"
+        >
+          <div class="p-6">
+            <div class="flex items-center space-x-3 mb-3">
+              <span
+                class="bg-gray-500 text-white text-xs px-3 py-1 rounded-full font-bold"
+                >一般</span
+              >
+              <span class="text-gray-500 text-sm">2024-10-30</span>
+            </div>
+            <h3
+              class="text-xl font-bold text-gray-800 mb-2 hover:text-blue-600 transition"
+            >
+              證書核發作業時程說明
+            </h3>
+            <p class="text-gray-600 mb-3">
+              通過認證考生之證書將於成績公告後 30
+              個工作天內完成核發，屆時將以掛號方式寄送至學校...
+            </p>
+            <div class="flex items-center justify-between text-sm">
+              <button
+                class="text-blue-600 hover:text-blue-700 font-medium flex items-center"
+              >
+                閱讀全文
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
 
-            <!-- 公告5 -->
-            <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer overflow-hidden">
-                <div class="p-6">
-                    <div class="flex items-center space-x-3 mb-3">
-                        <span class="bg-gray-500 text-white text-xs px-3 py-1 rounded-full font-bold">一般</span>
-                        <span class="text-gray-500 text-sm">2024-11-02</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2 hover:text-blue-600 transition">
-                        成績複查申請作業說明
-                    </h3>
-                    <p class="text-gray-600 mb-3">
-                        考生如對成績有疑義，可於成績公告後 7 日內提出複查申請。本文說明複查申請流程及注意事項...
-                    </p>
-                    <div class="flex items-center justify-between text-sm">
-                        <button class="text-blue-600 hover:text-blue-700 font-medium flex items-center">
-                            閱讀全文
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </article>
+        <!-- 公告7 -->
+        <article
+          class="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer overflow-hidden"
+        >
+          <div class="p-6">
+            <div class="flex items-center space-x-3 mb-3">
+              <span
+                class="bg-gray-500 text-white text-xs px-3 py-1 rounded-full font-bold"
+                >一般</span
+              >
+              <span class="text-gray-500 text-sm">2024-10-28</span>
+            </div>
+            <h3
+              class="text-xl font-bold text-gray-800 mb-2 hover:text-blue-600 transition"
+            >
+              系統維護公告
+            </h3>
+            <p class="text-gray-600 mb-3">
+              本系統將於 11 月 1 日凌晨 2:00-6:00
+              進行系統維護，期間將暫停服務，造成不便敬請見諒...
+            </p>
+            <div class="flex items-center justify-between text-sm">
+              <button
+                class="text-blue-600 hover:text-blue-700 font-medium flex items-center"
+              >
+                閱讀全文
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
 
-            <!-- 公告6 -->
-            <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer overflow-hidden">
-                <div class="p-6">
-                    <div class="flex items-center space-x-3 mb-3">
-                        <span class="bg-gray-500 text-white text-xs px-3 py-1 rounded-full font-bold">一般</span>
-                        <span class="text-gray-500 text-sm">2024-10-30</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2 hover:text-blue-600 transition">
-                        證書核發作業時程說明
-                    </h3>
-                    <p class="text-gray-600 mb-3">
-                        通過認證考生之證書將於成績公告後 30 個工作天內完成核發，屆時將以掛號方式寄送至學校...
-                    </p>
-                    <div class="flex items-center justify-between text-sm">
-                        <button class="text-blue-600 hover:text-blue-700 font-medium flex items-center">
-                            閱讀全文
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </article>
-
-            <!-- 公告7 -->
-            <article class="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer overflow-hidden">
-                <div class="p-6">
-                    <div class="flex items-center space-x-3 mb-3">
-                        <span class="bg-gray-500 text-white text-xs px-3 py-1 rounded-full font-bold">一般</span>
-                        <span class="text-gray-500 text-sm">2024-10-28</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2 hover:text-blue-600 transition">
-                        系統維護公告
-                    </h3>
-                    <p class="text-gray-600 mb-3">
-                        本系統將於 11 月 1 日凌晨 2:00-6:00 進行系統維護，期間將暫停服務，造成不便敬請見諒...
-                    </p>
-                    <div class="flex items-center justify-between text-sm">
-                        <button class="text-blue-600 hover:text-blue-700 font-medium flex items-center">
-                            閱讀全文
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </article>
-        </div>
-
-        <!-- 分頁 -->
-        <div class="mt-8 flex justify-center">
-            <nav class="flex items-center space-x-2">
-                <button class="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition">
-                    上一頁
-                </button>
-                <button class="px-4 py-2 rounded-lg bg-blue-600 text-white font-medium">1</button>
-                <button class="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition">2</button>
-                <button class="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition">3</button>
-                <button class="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition">
-                    下一頁
-                </button>
-            </nav>
-        </div>
+      <!-- 分頁 -->
+      <div class="mt-8 flex justify-center">
+        <nav class="flex items-center space-x-2">
+          <button
+            class="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition"
+          >
+            上一頁
+          </button>
+          <button
+            class="px-4 py-2 rounded-lg bg-blue-600 text-white font-medium"
+          >
+            1
+          </button>
+          <button
+            class="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition"
+          >
+            2
+          </button>
+          <button
+            class="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition"
+          >
+            3
+          </button>
+          <button
+            class="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition"
+          >
+            下一頁
+          </button>
+        </nav>
+      </div>
     </div>
 
     <!-- 頁尾 -->
     <footer class="bg-gray-800 text-white mt-16 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="mb-2">© 2024 原住民族語言到校考報名系統</p>
-            <p class="text-gray-400 text-sm">本系統由教育部國民及學前教育署委辦</p>
-        </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="mb-2">© 2025 原住民族語言到校考報名系統</p>
+        <p class="text-gray-400 text-sm">【財團法人原住民族語言研究發展基金會】版權所有 © 2025 ALL rights reserved</p>
+      </div>
     </footer>
 
     <script>
-        // 手機選單切換
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+      // 手機選單切換
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
     </script>
-</body>
+  </body>
 </html>
