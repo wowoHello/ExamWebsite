@@ -65,7 +65,11 @@
               class="text-gray-700 hover:text-blue-600 transition font-medium"
               >首頁</a
             >
-            <a href="登入後頁面.html" class="text-blue-600 font-medium border-b-2 border-blue-600 pb-1">我的報名</a>
+            <a
+              href="登入後頁面.html"
+              class="text-blue-600 font-medium border-b-2 border-blue-600 pb-1"
+              >我的報名</a
+            >
             <a
               href="公告頁面.html"
               class="text-gray-700 hover:text-blue-600 transition font-medium"
@@ -133,17 +137,27 @@
             <p class="text-sm font-bold text-gray-800">劉老師 您好</p>
             <p class="text-xs text-gray-500">桃園市立中興國民中學</p>
           </div>
-          <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-600"
+          <a
+            href="index.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
             >首頁</a
           >
-          <a href="登入後頁面.html" class="block py-2 text-blue-600 font-bold">我的報名</a>
-          <a href="公告頁面.html" class="block py-2 text-gray-700 hover:text-blue-600"
+          <a href="登入後頁面.html" class="block py-2 text-blue-600 font-bold"
+            >我的報名</a
+          >
+          <a
+            href="公告頁面.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
             >公告</a
           >
-          <a href="考生查詢與資料.html" class="block py-2 text-gray-700 hover:text-blue-600"
+          <a
+            href="考生查詢與資料.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
             >考生查詢</a
           >
-          <a href="聯絡我們.html" class="block py-2 text-gray-700 hover:text-blue-600"
+          <a
+            href="聯絡我們.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
             >聯絡我們</a
           >
           <button
@@ -207,7 +221,7 @@
       </div>
 
       <!-- 操作按鈕 -->
-      <div class="flex flex-col sm:flex-row gap-3 mb-6 no-print">        
+      <div class="flex flex-col sm:flex-row gap-3 mb-6 no-print">
         <button
           onclick="toggleAddStudentForm()"
           class="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition font-medium flex items-center justify-center"
@@ -596,64 +610,77 @@
       </div>
 
       <!-- 統計摘要 -->
-<div
-  class="mt-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6 border-2 border-blue-200"
->
-  <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
-    <svg
-      class="w-6 h-6 text-blue-600 mr-2"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-      ></path>
-    </svg>
-    報名統計
-  </h3>
+      <div
+        class="mt-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6 border-2 border-blue-200"
+      >
+        <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+          <svg
+            class="w-6 h-6 text-blue-600 mr-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+            ></path>
+          </svg>
+          報名統計
+        </h3>
 
-  <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
-    <!-- 總人數 -->
-    <div class="bg-white rounded-lg p-4 text-center border border-blue-200 col-span-1 md:col-span-1">
-      <p class="text-2xl font-bold text-blue-600">2</p>
-      <p class="text-sm text-gray-600 mt-1">總人數</p>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+          <!-- 總人數 -->
+          <div
+            class="bg-white rounded-lg p-4 text-center border border-blue-200 col-span-1 md:col-span-1"
+          >
+            <p class="text-2xl font-bold text-blue-600">2</p>
+            <p class="text-sm text-gray-600 mt-1">總人數</p>
+          </div>
+
+          <!-- 初級 -->
+          <div
+            class="bg-white rounded-lg p-4 text-center border border-purple-200"
+          >
+            <p class="text-2xl font-bold text-purple-600">1</p>
+            <p class="text-sm text-gray-600 mt-1">初級</p>
+          </div>
+
+          <!-- 中級 -->
+          <div
+            class="bg-white rounded-lg p-4 text-center border border-green-200"
+          >
+            <p class="text-2xl font-bold text-green-600">1</p>
+            <p class="text-sm text-gray-600 mt-1">中級</p>
+          </div>
+
+          <!-- 中高級 -->
+          <div
+            class="bg-white rounded-lg p-4 text-center border border-yellow-200"
+          >
+            <p class="text-2xl font-bold text-yellow-600">0</p>
+            <p class="text-sm text-gray-600 mt-1">中高級</p>
+          </div>
+
+          <!-- 高級 -->
+          <div
+            class="bg-white rounded-lg p-4 text-center border border-red-200"
+          >
+            <p class="text-2xl font-bold text-red-600">0</p>
+            <p class="text-sm text-gray-600 mt-1">高級</p>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <!-- 初級 -->
-    <div class="bg-white rounded-lg p-4 text-center border border-purple-200">
-      <p class="text-2xl font-bold text-purple-600">1</p>
-      <p class="text-sm text-gray-600 mt-1">初級</p>
-    </div>
-
-    <!-- 中級 -->
-    <div class="bg-white rounded-lg p-4 text-center border border-green-200">
-      <p class="text-2xl font-bold text-green-600">1</p>
-      <p class="text-sm text-gray-600 mt-1">中級</p>
-    </div>
-
-    <!-- 中高級 -->
-    <div class="bg-white rounded-lg p-4 text-center border border-yellow-200">
-      <p class="text-2xl font-bold text-yellow-600">0</p>
-      <p class="text-sm text-gray-600 mt-1">中高級</p>
-    </div>
-
-    <!-- 高級 -->
-    <div class="bg-white rounded-lg p-4 text-center border border-red-200">
-      <p class="text-2xl font-bold text-red-600">0</p>
-      <p class="text-sm text-gray-600 mt-1">高級</p>
-    </div>
-  </div>
-</div>
-
     <!-- 頁尾 -->
-    <footer class="bg-gray-800 text-white mt-16 py-8 no-print">
+    <footer class="bg-gray-800 text-white mt-16 py-8">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p class="mb-2">© 2025 原住民族語言到校考報名系統</p>
-        <p class="text-gray-400 text-sm">【財團法人原住民族語言研究發展基金會】版權所有 © 2025 ALL rights reserved</p>
+        <p class="text-gray-400 text-sm">
+          【財團法人原住民族語言研究發展基金會】版權所有 © 2025 ALL rights
+          reserved
+        </p>
       </div>
     </footer>
 
