@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>報名詳細資料 - 原住民族語言到校考報名系統</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
+        }
+        .shake {
+            animation: shake 0.5s;
+        }
+        @media print {
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- 導航列 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-lg font-bold text-gray-800">原住民族語言到校考</h1>
+                        <p class="text-xs text-gray-500">報名系統</p>
+                    </div>
+                </div>
+
+                <!-- 桌面選單 -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a
+              href="index.html"
+              class="text-gray-700 hover:text-blue-600 transition font-medium"
+              >首頁</a
+            >
+            <a
+              href="登入後頁面.html"
+              class="text-blue-600 font-medium border-b-2 border-blue-600 pb-1"
+              >我的報名</a
+            >
+            <a
+              href="公告頁面.html"
+              class="text-gray-700 hover:text-blue-600 transition font-medium"
+              >公告</a
+            >
+            <a
+              href="報名步驟.html"
+              class="text-gray-700 hover:text-blue-600 transition font-medium"
+              >報名流程</a
+            >
+            <a
+              href="考生查詢與資料.html"
+              class="text-gray-700 hover:text-blue-600 transition font-medium"
+              >考生查詢</a
+            >
+            <a
+              href="聯絡我們.html"
+              class="text-gray-700 hover:text-blue-600 transition font-medium"
+              >聯絡我們</a
+            >
+                    
+                    <!-- 使用者資訊 -->
+            <div class="flex items-center space-x-3 pl-4 border-l">
+              <div class="text-right">
+                <p class="text-sm font-bold text-gray-800">劉老師 您好</p>
+                <p class="text-xs text-gray-500">桃園市立中興國民中學</p>
+              </div>
+              <button
+                class="p-2 hover:bg-gray-100 rounded-lg transition"
+                title="登出"
+              >
+                <svg
+                  class="w-5 h-5 text-gray-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+                </div>
+
+                <!-- 手機選單按鈕 -->
+                <button id="mobileMenuBtn" class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- 手機選單 -->
+            <div id="mobileMenu" class="hidden md:hidden py-4 border-t">
+                <div class="mb-4 pb-4 border-b">
+            <p class="text-sm font-bold text-gray-800">劉老師 您好</p>
+            <p class="text-xs text-gray-500">桃園市立中興國民中學</p>
+          </div>
+          <a
+            href="index.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
+            >首頁</a
+          >
+          <a href="登入後頁面.html" class="block py-2 text-blue-600 font-bold"
+            >我的報名</a
+          >
+          <a
+            href="公告頁面.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
+            >公告</a
+          >
+          <a
+            href="報名步驟.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
+            >報名流程</a
+          >
+          <a
+            href="考生查詢與資料.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
+            >考生查詢</a
+          >
+          <a
+            href="聯絡我們.html"
+            class="block py-2 text-gray-700 hover:text-blue-600"
+            >聯絡我們</a
+          >
+          <a href="#" class="block mt-2 text-gray-600">登出</a>
+        </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 頁面標題 -->
+    <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-8 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center space-x-2 mb-2">
+                <a href="#" class="text-blue-200 hover:text-white transition text-sm">我的報名</a>
+                <svg class="w-4 h-4 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <span class="text-sm">報名詳細資料</span>
+            </div>
+            <h1 class="text-2xl md:text-3xl font-bold">113年度第一梯次報名</h1>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- 報名摘要資訊 -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6 fade-in">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                    <p class="text-sm text-blue-700 mb-1">報名編號</p>
+                    <p class="text-lg font-bold text-blue-900">2024-N-001</p>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                    <p class="text-sm text-purple-700 mb-1">考試日期</p>
+                    <p class="text-lg font-bold text-purple-900">2025-03-15</p>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                    <p class="text-sm text-green-700 mb-1">報名人數</p>
+                    <p class="text-lg font-bold text-green-900">2 人</p>
+                </div>
+                <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                    <p class="text-sm text-red-700 mb-1">審核狀態</p>
+                    <p class="text-lg font-bold text-red-900">待補件</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 補件提示 -->
+        <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg mb-6 no-print">
+            <div class="flex items-start">
+                <svg class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                </svg>
+                <div>
+                    <h3 class="font-bold text-red-900 mb-2 text-lg">需要補件</h3>
+                    <p class="text-red-800 mb-3">有考生資料不完整，請儘速補齊以下資料：</p>
+                    <ul class="list-disc list-inside space-y-1 text-red-700 text-sm">
+                        <li>考生1（阿杰）：缺少照片</li>
+                        <li>考生2（阿呆）：缺少身分證字號、照片</li>
+                    </ul>
+                    <p class="text-red-600 text-sm mt-3">⏰ 補件期限：2024-11-20</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 操作按鈕 -->
+      <div class="flex flex-col sm:flex-row gap-3 mb-6 no-print">        
+        <button
+          onclick="toggleAddStudentForm()"
+          class="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition font-medium flex items-center justify-center"
+        >
+          <svg
+            class="w-5 h-5 mr-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 4v16m8-8H4"
+            ></path>
+          </svg>
+          新增考生
+        </button>
+        <button
+          onclick="window.history.back()"
+          class="flex-1 bg-gray-200 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-300 transition font-medium flex items-center justify-center"
+        >
+          <svg
+            class="w-5 h-5 mr-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            ></path>
+          </svg>
+          返回
+        </button>
+      </div>
+<!-- 新增考生表單（預設隱藏） -->
+      <div
+        id="addStudentForm"
+        class="bg-white rounded-lg shadow-md p-6 mb-6 fade-in hidden"
+      >
+        <h2 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+          <svg
+            class="w-6 h-6 text-green-600 mr-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 4v16m8-8H4"
+            ></path>
+          </svg>
+          新增考生
+        </h2>
+
+        <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm text-gray-600 mb-1">姓名</label>
+            <input
+              type="text"
+              class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              placeholder="請輸入姓名"
+            />
+          </div>
+          <div>
+            <label class="block text-sm text-gray-600 mb-1">身分證字號</label>
+            <input
+              type="text"
+              class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              placeholder="請輸入身分證字號"
+            />
+          </div>
+          <div>
+            <label class="block text-sm text-gray-600 mb-1">考試語別</label>
+            <input
+              type="text"
+              placeholder="請輸入語別（例如：賽考利克泰雅語）"
+              class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+          <div>
+            <label class="block text-sm text-gray-600 mb-1">考試等級</label>
+            <div class="relative">
+              <select
+                class="appearance-none w-full border border-gray-300 rounded-lg px-3 pr-10 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              >
+                <option>請選擇等級</option>
+                <option>初級</option>
+                <option>中級</option>
+                <option>高級</option>
+              </select>
+              <svg
+                class="w-5 h-5 text-gray-500 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm text-gray-600 mb-1">身份別</label>
+            <div class="relative">
+              <select
+                class="appearance-none w-full border border-gray-300 rounded-lg px-3 pr-10 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              >
+                <option>請選擇身份別</option>
+                <option>原住民</option>
+                <option>非原住民</option>
+              </select>
+              <svg
+                class="w-5 h-5 text-gray-500 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm text-gray-600 mb-1">考生類別</label>
+            <div class="relative">
+              <select
+                class="appearance-none w-full border border-gray-300 rounded-lg px-3 pr-10 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              >
+                <option>請選擇考生類別</option>
+                <option>一般生</option>
+                <option>身心障礙考生</option>
+              </select>
+              <svg
+                class="w-5 h-5 text-gray-500 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <!-- 大頭照上傳 -->
+          <div class="md:col-span-2">
+            <label class="block text-sm text-gray-600 mb-1"
+              >考生大頭照（正面半身）</label
+            >
+
+            <div class="flex items-center gap-4">
+              <!-- 預覽區：改成你的頭像樣式 -->
+              <div
+                class="w-40 h-40 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg overflow-hidden shadow-lg flex items-center justify-center"
+              >
+                <!-- 預覽圖片 -->
+                <img
+                  id="photoPreview"
+                  class="w-full h-full object-cover hidden"
+                  alt="考生大頭照預覽"
+                />
+
+                <!-- 預設佔位文字 -->
+                <span
+                  id="photoPlaceholder"
+                  class="text-sm text-white text-center leading-tight px-1 opacity-80"
+                >
+                  尚未<br />上傳
+                </span>
+              </div>
+
+              <!-- 上傳按鈕 -->
+              <div class="flex-1">
+                <input
+                  id="photoInput"
+                  type="file"
+                  accept="image/*"
+                  class="block w-full text-sm text-gray-700 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-blue-600 file:text-white hover:file:bg-blue-700 cursor-pointer"
+                />
+                <p class="mt-1 text-xs text-gray-400">
+                  建議：正面半身、jpg/png（5MB 以內）。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:col-span-2 flex justify-end space-x-3 mt-4">
+            <button
+              type="button"
+              onclick="toggleAddStudentForm()"
+              class="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 text-sm hover:bg-gray-100"
+            >
+              取消
+            </button>
+            <button
+              type="submit"
+              class="px-4 py-2 rounded-lg bg-green-600 text-white text-sm font-medium hover:bg-green-700"
+            >
+              儲存考生
+            </button>
+          </div>
+        </form>
+      </div>
+        <!-- 考生列表 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden fade-in">
+            <div class="bg-gray-50 px-6 py-4 border-b">
+                <h2 class="text-xl font-bold text-gray-800 flex items-center">
+                    <svg class="w-6 h-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                    考生名單
+                </h2>
+            </div>
+
+            <div class="p-6">
+                <!-- 考生1：阿杰（缺照片） -->
+                <div class="border-2 border-red-300 bg-red-50 rounded-lg p-6 mb-6 hover:shadow-md transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-2">
+                            <span class="bg-blue-600 text-white text-sm px-3 py-1 rounded-full font-bold">考生 1</span>
+                            <span class="bg-red-500 text-white text-sm px-3 py-1 rounded-full font-bold flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                                </svg>
+                                待補件
+                            </span>
+                        </div>
+                        <button 
+                            onclick="openSupplementModal('阿杰', 1)"
+                            class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition font-medium flex items-center no-print"
+                        >
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                            </svg>
+                            立即補件
+                        </button>
+                    </div>
+                    
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <!-- 照片 - 缺少 -->
+                        <div class="flex-shrink-0">
+                            <div class="w-32 h-32 bg-gray-200 border-4 border-dashed border-red-400 rounded-lg flex items-center justify-center">
+                                <div class="text-center">
+                                    <svg class="w-12 h-12 text-red-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                    </svg>
+                                    <p class="text-xs text-red-600 font-bold">缺少照片</p>
+                                </div>
+                            </div>
+                            <p class="text-center text-xs text-red-600 mt-2 font-medium">⚠️ 需補件</p>
+                        </div>
+
+                        <!-- 資料 -->
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">基本資料</h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <p class="text-xs text-gray-600 mb-1">姓名</p>
+                                    <p class="text-base font-bold text-gray-800">阿杰</p>
+                                </div>
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <p class="text-xs text-gray-600 mb-1">身分證字號</p>
+                                    <p class="text-base font-bold text-gray-800">B123456789</p>
+                                </div>
+                                <div class="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-500">
+                                    <p class="text-xs text-blue-700 mb-1">考試語別</p>
+                                    <p class="text-base font-bold text-blue-900">南勢阿美語</p>
+                                </div>
+                                <div class="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-500">
+                                    <p class="text-xs text-blue-700 mb-1">考試等級</p>
+                                    <p class="text-base font-bold text-blue-900">初級</p>
+                                </div>
+                                <div class="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-500">
+                                    <p class="text-xs text-blue-700 mb-1">身份別</p>
+                                    <p class="text-base font-bold text-blue-900">原住民</p>
+                                </div>
+                                <div class="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-500">
+                                    <p class="text-xs text-blue-700 mb-1">考生類別</p>
+                                    <p class="text-base font-bold text-blue-900">一般生</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 考生2：阿呆（缺身分證字號和照片） -->
+                <div class="border-2 border-red-300 bg-red-50 rounded-lg p-6 hover:shadow-md transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center space-x-2">
+                            <span class="bg-blue-600 text-white text-sm px-3 py-1 rounded-full font-bold">考生 2</span>
+                            <span class="bg-red-500 text-white text-sm px-3 py-1 rounded-full font-bold flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                                </svg>
+                                待補件
+                            </span>
+                        </div>
+                        <button 
+                            onclick="openSupplementModal('阿呆', 2)"
+                            class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition font-medium flex items-center no-print"
+                        >
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                            </svg>
+                            立即補件
+                        </button>
+                    </div>
+                    
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <!-- 照片 - 缺少 -->
+                        <div class="flex-shrink-0">
+                            <div class="w-32 h-32 bg-gray-200 border-4 border-dashed border-red-400 rounded-lg flex items-center justify-center">
+                                <div class="text-center">
+                                    <svg class="w-12 h-12 text-red-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                    </svg>
+                                    <p class="text-xs text-red-600 font-bold">缺少照片</p>
+                                </div>
+                            </div>
+                            <p class="text-center text-xs text-red-600 mt-2 font-medium">⚠️ 需補件</p>
+                        </div>
+
+                        <!-- 資料 -->
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">基本資料</h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="bg-white p-3 rounded-lg border border-gray-200">
+                                    <p class="text-xs text-gray-600 mb-1">姓名</p>
+                                    <p class="text-base font-bold text-gray-800">阿呆</p>
+                                </div>
+                                <!-- 身分證字號 - 缺少 -->
+                                <div class="bg-red-100 p-3 rounded-lg border-2 border-dashed border-red-400">
+                                    <p class="text-xs text-red-700 mb-1 flex items-center">
+                                        <svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                                        </svg>
+                                        身分證字號
+                                    </p>
+                                    <p class="text-sm font-bold text-red-600">⚠️ 缺少資料</p>
+                                </div>
+                                <div class="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-500">
+                                    <p class="text-xs text-blue-700 mb-1">考試語別</p>
+                                    <p class="text-base font-bold text-blue-900">南勢阿美語</p>
+                                </div>
+                                <div class="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-500">
+                                    <p class="text-xs text-blue-700 mb-1">考試等級</p>
+                                    <p class="text-base font-bold text-blue-900">中級</p>
+                                </div>
+                                <div class="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-500">
+                                    <p class="text-xs text-blue-700 mb-1">身份別</p>
+                                    <p class="text-base font-bold text-blue-900">原住民</p>
+                                </div>
+                                <div class="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-500">
+                                    <p class="text-xs text-blue-700 mb-1">考生類別</p>
+                                    <p class="text-base font-bold text-blue-900">一般生</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 補件Modal -->
+    <div id="supplementModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-4 flex items-center justify-between">
+                <h3 class="text-xl font-bold flex items-center">
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                    </svg>
+                    補件資料
+                </h3>
+                <button onclick="closeSupplementModal()" class="text-white hover:text-gray-200">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="p-6">
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg mb-6">
+                    <p class="text-blue-800 text-sm">
+                        <strong>考生：</strong><span id="modalStudentName"></span>
+                    </p>
+                </div>
+
+                <form id="supplementForm" class="space-y-6">
+                    <!-- 身分證字號 -->
+                    <div id="idNumberField" class="hidden">
+                        <label class="block text-sm font-bold text-gray-700 mb-2">
+                            身分證字號 <span class="text-red-500">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="idNumber"
+                            placeholder="請輸入身分證字號（例：B123456789）"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                        >
+                    </div>
+
+                    <!-- 照片上傳 -->
+                    <div id="photoField">
+                        <label class="block text-sm font-bold text-gray-700 mb-2">
+                            考生照片 <span class="text-red-500">*</span>
+                        </label>
+                        <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-orange-500 transition">
+                            <input 
+                                type="file" 
+                                id="photoUpload" 
+                                accept="image/*"
+                                class="hidden"
+                                onchange="previewPhoto(event)"
+                            >
+                            <div id="uploadArea" onclick="document.getElementById('photoUpload').click()" class="cursor-pointer">
+                                <svg class="w-12 h-12 text-gray-400 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                <p class="text-gray-600 mb-2">點擊上傳照片</p>
+                                <p class="text-xs text-gray-500">支援 JPG、PNG 格式，檔案大小不超過 2MB</p>
+                            </div>
+                            <div id="previewArea" class="hidden">
+                                <img id="photoPreview" class="max-w-xs mx-auto rounded-lg shadow-md">
+                                <button type="button" onclick="removePhoto()" class="mt-3 text-red-600 hover:text-red-700 text-sm font-medium">
+                                    重新上傳
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 備註 -->
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">
+                            備註（選填）
+                        </label>
+                        <textarea 
+                            id="remark"
+                            rows="3"
+                            placeholder="如有其他說明，請在此填寫"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                        ></textarea>
+                    </div>
+
+                    <!-- 按鈕 -->
+                    <div class="flex gap-3 pt-4">
+                        <button 
+                            type="button"
+                            onclick="closeSupplementModal()"
+                            class="flex-1 bg-gray-200 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-300 transition font-medium"
+                        >
+                            取消
+                        </button>
+                        <button 
+                            type="submit"
+                            class="flex-1 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition font-bold"
+                        >
+                            送出補件
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer class="bg-gray-800 text-white mt-16 py-8 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-2">© 2024 原住民族語言到校考報名系統</p>
+            <p class="text-gray-400 text-sm">本系統由教育部國民及學前教育署委辦</p>
+        </div>
+    </footer>
+
+    <script>
+        // 手機選單切換
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 開啟補件Modal
+        function openSupplementModal(studentName, studentId) {
+            const modal = document.getElementById('supplementModal');
+            const nameSpan = document.getElementById('modalStudentName');
+            const idNumberField = document.getElementById('idNumberField');
+            
+            nameSpan.textContent = studentName;
+            
+            // 根據考生決定是否顯示身分證字號欄位
+            if (studentId === 2) { // 阿呆需要補身分證字號
+                idNumberField.classList.remove('hidden');
+            } else {
+                idNumberField.classList.add('hidden');
+            }
+            
+            modal.classList.remove('hidden');
+        }
+
+        // 關閉補件Modal
+        function closeSupplementModal() {
+            const modal = document.getElementById('supplementModal');
+            modal.classList.add('hidden');
+            // 重置表單
+            document.getElementById('supplementForm').reset();
+            document.getElementById('uploadArea').classList.remove('hidden');
+            document.getElementById('previewArea').classList.add('hidden');
+        }
+
+        // 預覽照片
+        function previewPhoto(event) {
+            const file = event.target.files[0];
+            if (file) {
+                // 檢查檔案大小（2MB）
+                if (file.size > 2 * 1024 * 1024) {
+                    alert('檔案大小不能超過 2MB');
+                    return;
+                }
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('photoPreview').src = e.target.result;
+                    document.getElementById('uploadArea').classList.add('hidden');
+                    document.getElementById('previewArea').classList.remove('hidden');
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // 移除照片
+        function removePhoto() {
+            document.getElementById('photoUpload').value = '';
+            document.getElementById('uploadArea').classList.remove('hidden');
+            document.getElementById('previewArea').classList.add('hidden');
+        }
+
+        // 表單提交
+        document.getElementById('supplementForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const photoFile = document.getElementById('photoUpload').files[0];
+            const idNumber = document.getElementById('idNumber').value;
+            
+            // 驗證必填欄位
+            if (!photoFile) {
+                alert('請上傳考生照片');
+                return;
+            }
+            
+            // 如果身分證字號欄位顯示且為空
+            const idNumberField = document.getElementById('idNumberField');
+            if (!idNumberField.classList.contains('hidden') && !idNumber) {
+                alert('請填寫身分證字號');
+                return;
+            }
+            
+            // 模擬上傳
+            alert('補件資料已送出！\n系統將重新審核您的資料。');
+            closeSupplementModal();
+            
+            // 實際應該呼叫 API 上傳資料
+            // 然後重新載入頁面或更新狀態
+        });
+
+        // 點擊Modal外部關閉
+        document.getElementById('supplementModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSupplementModal();
+            }
+        });
+        // 新增考生表單顯示/隱藏
+      function toggleAddStudentForm() {
+        const form = document.getElementById("addStudentForm");
+        if (!form) return;
+        form.classList.toggle("hidden");
+
+        if (!form.classList.contains("hidden")) {
+          // 展開時順便捲到表單位置
+          form.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+      // 大頭照上傳預覽
+      const photoInput = document.getElementById("photoInput");
+      const photoPreview = document.getElementById("photoPreview");
+      const photoPlaceholder = document.getElementById("photoPlaceholder");
+
+      if (photoInput) {
+        photoInput.addEventListener("change", (e) => {
+          const file = e.target.files && e.target.files[0];
+          if (!file) {
+            // 清空預覽
+            photoPreview.src = "";
+            photoPreview.classList.add("hidden");
+            photoPlaceholder.classList.remove("hidden");
+            return;
+          }
+
+          const url = URL.createObjectURL(file);
+          photoPreview.src = url;
+          photoPreview.classList.remove("hidden");
+          photoPlaceholder.classList.add("hidden");
+        });
+      }
+    </script>
+</body>
+</html>
